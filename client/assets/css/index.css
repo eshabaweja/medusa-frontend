@@ -1,28 +1,120 @@
-@font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
 *{
-    color: #fff;
+  margin: none;
+  padding: none;
+  font-family: sans-serif;
 }
-.navbar, .footer{
-    background-color: #201932;
-    font: Poppins;
 
+.filter-purple
+{
+  filter: invert(69%) sepia(7%) saturate(1338%) hue-rotate(270deg) brightness(90%) contrast(91%);
+}
+
+h1{
+  color: #C492B1;
+}
+
+.navbar{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content:right;
+}
+
+.navbar .links, .logo{
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img{
+  height: 300px;
+  position: absolute;
+  top: 0%;
+  left: 0;
+}
+
+
+.link, .logo{
+  margin: 10px;
+  cursor: pointer;
 }
 
 .login{
-    background-color: #ea37a3;
+  background-color: #774062;
+  color: #ffffff;
+  padding: 10px;
+  width: 90px;
+  border-radius: 30px;
+  text-align: center;
 }
 
-.card{
-    background-color: #2bbef2;
+.home{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .hero{
-    background-color: #6b4ee6;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  position: relative;
+}
+
+.p{
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.features h1{
+  text-align: center;
+  margin-top: 100px;
+}
+
+.cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.card{
+  height: 30%;
+  width: 300px;
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.features .cards .card img{
+  display: flex;
+  width: 200px;
+}
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #c0c0c055;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.footer img{
+  margin: 5px;
+}
+
+.madewith{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
