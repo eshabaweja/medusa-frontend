@@ -1,6 +1,6 @@
 *{
-  margin: none;
-  padding: none;
+  margin: 0;
+  padding: 0;
   font-family: sans-serif;
 }
 
@@ -10,47 +10,93 @@
 }
 
 h1{
-  color: #C492B1;
+  color: #DBBDD0;
 }
 
-.navbar{
-  position: relative;
+.navbar .links{
+  display: flex;
+  align-items:center;
+  margin-top: 10px;
+  position: absolute;
+  right: 0;
+}
+
+.logo img{
+  height: 200px;
+}
+
+.logo h1{
+  color: #C695B6;
+}
+
+.logo{
   display: flex;
   flex-direction: row;
-  justify-content:right;
-}
-
-.navbar .links, .logo{
-  display: flex;
-  align-items: center;
-}
-
-.navbar .logo img{
-  height: 300px;
+  align-items:center;
+  margin: 20px;
   position: absolute;
-  top: 0%;
-  left: 0;
+  height: fit-content;
+  width: fit-content;
+  left:0%;
 }
 
+.logo a{
+  text-decoration: none;
+}
 
-.link, .logo{
+.links{
+  top: 0%;
+  width:min-content;
+}
+
+.link{
+  text-decoration: none;
   margin: 10px;
+  padding: 5px;
+}
+
+.link:hover{
+  cursor: pointer;
+  background-color: #c0c0c055;
+}
+
+.link:visited, link:active
+{
+  text-decoration: none;
+  color: inherit;
+}
+
+.button, .contact-card form .button{
+  background-color: #9F5683;
+  color: #ffffff;
+  padding: 10px;
+  width:max-content;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.button:hover, form .button:hover{
+  background-color: #85476D;
+  color: #ffffff;
+  padding: 10px;
   cursor: pointer;
 }
 
-.login{
-  background-color: #774062;
-  color: #ffffff;
-  padding: 10px;
-  width: 90px;
-  border-radius: 30px;
-  text-align: center;
+.fwh-slide{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .home{
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  top: 10vh;
 }
 
 .hero{
@@ -61,52 +107,97 @@ h1{
   position: relative;
 }
 
-.p{
-  display: flex;
-  flex-direction: column;
-  text-align: justify;
-}
-
-.features h1{
+#features h1, #faqs h1, #contact h1{
   text-align: center;
-  margin-top: 100px;
+  font-size: 32px;
+  padding: 16px;
+  width: 100vw;
+  background-color: #00000059;
 }
 
 .cards{
   display: flex;
-  flex-direction: row;
+  flex-direction:row;
   flex-wrap: wrap;
+  width: 100vw;
+  background-color: aqua;
+
   position: relative;
+  padding-bottom: 5vh;
 }
 
 .card{
-  height: 30%;
+  height: 20vh;
   width: 300px;
   margin: auto;
-  margin-bottom: 30px;
-  padding: 30px;
+  padding: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.features .cards .card img{
+#features .cards .card img{
   display: flex;
   width: 200px;
+  margin-bottom: 2vh;
+}
+
+#contact{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  background-image: url(../images/jellyfish-bg.jpg);
+  background-size: cover;
+}
+
+.contact-card{
+  text-align: center;
+  margin-top: 10vh;
+  height: 500px;
+  width: 750px;
+  background-color: #7a4f6aa4;
+  justify-content: center;
+}
+.contact-card form{
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+}
+
+.contact-card .form-control{
+  width: 600px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #c0c0c0;
+  font-size: 18px;
+  color: #ffffff;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+input{
+  height: 45px;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 .footer{
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%;
-  text-align: center;
-  background-color: #c0c0c055;
+  width: 100vw;
+  background-color: #00000075;
   display: flex;
   align-items: center;
   flex-direction: column;
   font-size: 16px;
+  color: #F8F2F6;
+
 }
 
 .footer img{
