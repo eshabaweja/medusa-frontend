@@ -7,7 +7,6 @@ import Features from './pages/Features';
 import FAQs from './pages/FAQs';
 
 import {
-  BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
