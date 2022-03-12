@@ -34,7 +34,6 @@ button:active{
 .Nav,
 .Footer{
   display: flex;
-  box-shadow: 0px 0px 24px -12px;
   align-items:center;
   justify-content: space-between;
   height: 72px;
@@ -47,6 +46,7 @@ button:active{
   top: 0;
   left: 0;
   right: 0;
+  box-shadow: 0px 0px 24px -12px #202020;
   font-size: 18px;
 }
 .nav--logo{
@@ -67,7 +67,7 @@ button:active{
   bottom: 0;
   left: 0;
   right: 0; 
-  box-shadow: 0px 0px 24px -16px;
+  box-shadow: 0px 0px 24px -16px #202020;
   justify-content: center;
 }
 
@@ -76,8 +76,15 @@ button:active{
   text-decoration: none;
 }
 
+.App{
+  padding-top: 15vh;
+}
+
+.page--title{
+  margin-left: 72px;
+}
+
 .Home{
-  margin-top: 20vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -96,46 +103,47 @@ button:active{
   margin-top: 40px;
   text-align: center;
 }
-.home--landing>p{
+.text{
   font-size: 18px;
   line-height: 2em;
 }
-/* .App {
-  text-align: center;
+
+.Cards{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 72px;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Card{
   display: flex;
   flex-direction: column;
+  margin: 20px;
+  margin-top: 0;
+  border-radius: 10%;
+  box-shadow: 0 8px 16px -12px #202020;
+  padding: 32px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 400px;
+  min-height: 300px;
+  user-select: none;
 }
 
-.App-link {
-  color: #61dafb;
+.card--image{
+  width: 300px;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card--title,
+.card--text{
+  margin-top: 5px;
+  text-align: center; 
 }
- */
+
+.faqs--img{
+  display: block;
+  margin: 20px;
+  margin-left:auto;
+}
