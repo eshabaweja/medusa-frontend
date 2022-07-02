@@ -10,6 +10,6 @@ export default function Nav(){
             <Link to="/about" className="nav--link">About</Link>
             <Link to="/features" className="nav--link">Features</Link>
             <Link to="/faqs" className="nav--link">FAQs</Link>
-            <button className="nav--signin">Login</button>
+            <div id="nav--signin" className="nav--signin"></div>
     </div>)
 }
