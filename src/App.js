@@ -13,7 +13,6 @@ import {
 import jwt_decode from "jwt-decode"
 
 function App() {
-
   // setting user state and creating a user object
   const [ user, setUser] = useState({});
   function handleCredentialResponse(response){
@@ -22,14 +21,8 @@ function App() {
     console.log(userObject)
     setUser(userObject);
     document.getElementById("nav--signin").hidden = true;
+    document.getElementById("nav--signout").hidden = false;
   }
-
-  // showing sign out if user signed in
-  function handleSignOut(event){
-    setUser({});
-    document.getElementById("nav--signin").hidden = false;
-  }
-
 
   useEffect(()=>{
     /* global google */
@@ -42,7 +35,8 @@ function App() {
       document.getElementById("nav--signin"),
       {
         theme: "outline",
-        size: "large"
+        size: "large",
+        text: "continue_with"
       }
     );
 // another way of prompting to login
@@ -62,8 +56,14 @@ google.accounts.id.prompt();
         <Route path="faqs" element={<FAQs />} />
       </Routes>
       {
+        // showing sign out if user signed in
         Object.keys(user).length !=0 &&
-        <button onClick={(e)=> handleSignOut(e)}>Sign Out</button>
+        // <button onClick={(e)=> handleSignOut(e)}>Sign Out</button>
+        document.getElementById("nav--signout").addEventListener('click',function handleSignOut(event){
+          setUser({});
+          document.getElementById("nav--signin").hidden = false;
+          document.getElementById("nav--signout").hidden = true;
+        })
       }
 
       {

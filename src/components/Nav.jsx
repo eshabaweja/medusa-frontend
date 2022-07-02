@@ -11,5 +11,6 @@ export default function Nav(){
             <Link to="/features" className="nav--link">Features</Link>
             <Link to="/faqs" className="nav--link">FAQs</Link>
             <div id="nav--signin" className="nav--signin"></div>
+            <button id="nav--signout" className="nav--signout" hidden = "true">Sign Out</button>
     </div>)
 }

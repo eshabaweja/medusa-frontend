@@ -14,22 +14,27 @@
 
 
 button{
-  background-color: #FF8500;
-  color: #ffffff;
+  background-color: transparent;
+  color: #202020;
   font-size: 16px;
   font-weight: 600;
-  padding: 16px 32px;
+  padding: 8px 16px;
+  margin: 8px;
   border-radius: 5px;
-  border: none;
+  border: thin solid #363636;
+}
+
+.nav--signin{
+  margin: 8px;
 }
 
 button:hover{
-  color: #ffffff;
   cursor: pointer;
 }
 
 button:active{
-  background-color: #FF5400;;
+  background-color: #363636;
+  color: #ffffff;
 }
 
 .Nav,
@@ -127,7 +132,7 @@ button:active{
   flex-direction: column;
   margin: 20px;
   margin-top: 0;
-  border-radius: 20px;
+  border-radius: 5px;
   box-shadow: 0 8px 16px -12px #202020;
   padding: 32px;
   align-items: center;
@@ -160,13 +165,12 @@ button:active{
   padding: 25px;
   box-shadow: 0 8px 16px -12px #202020;
   text-align: justify;
-  border-radius: 20px;
+  border-radius: 5px;
   transition: transform .2s;
+  text-overflow: ellipsis;
 }
 
 .about--text:hover{
-  transform: scale(1.02);
-  top: 90px;
   box-shadow: 0 8px 16px -8px #ff5500a2;
   cursor:pointer;
 }
